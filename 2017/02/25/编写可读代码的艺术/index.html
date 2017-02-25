@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="编程之术，读书笔记," />
 
 
 
@@ -89,16 +89,43 @@
 
 
 
-<meta name="description" content="随笔记录技术与家庭">
+<meta name="description" content="1 可读性基本定理代码的写法应当使别人**理解它所需的时间最小化**
+因此尽管减少代码行数是一个好目标，但把理解代码所需的时间最小 化是一个更好的目标
+“表面层次” 的改进开始： 选择好的名字、 写好的注释以及把代码整洁地写成更好的格式
+2 把信息装到名字里
+选择专业的词
+避免泛泛的名字
+用具体的名字代替抽象的名字
+使用前缀或后缀来给名字附带更多信息
+决定名字的长度
+利用名字的格式来表达含义">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编写可读代码的艺术">
+<meta property="og:title" content="编写可读代码的艺术笔记">
 <meta property="og:url" content="http://glee0413.github.io/2017/02/25/编写可读代码的艺术/index.html">
 <meta property="og:site_name" content="月隐江楼的小楼">
-<meta property="og:description" content="随笔记录技术与家庭">
-<meta property="og:updated_time" content="2017-02-25T14:14:18.156Z">
+<meta property="og:description" content="1 可读性基本定理代码的写法应当使别人**理解它所需的时间最小化**
+因此尽管减少代码行数是一个好目标，但把理解代码所需的时间最小 化是一个更好的目标
+“表面层次” 的改进开始： 选择好的名字、 写好的注释以及把代码整洁地写成更好的格式
+2 把信息装到名字里
+选择专业的词
+避免泛泛的名字
+用具体的名字代替抽象的名字
+使用前缀或后缀来给名字附带更多信息
+决定名字的长度
+利用名字的格式来表达含义">
+<meta property="og:updated_time" content="2017-02-25T14:33:00.658Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编写可读代码的艺术">
-<meta name="twitter:description" content="随笔记录技术与家庭">
+<meta name="twitter:title" content="编写可读代码的艺术笔记">
+<meta name="twitter:description" content="1 可读性基本定理代码的写法应当使别人**理解它所需的时间最小化**
+因此尽管减少代码行数是一个好目标，但把理解代码所需的时间最小 化是一个更好的目标
+“表面层次” 的改进开始： 选择好的名字、 写好的注释以及把代码整洁地写成更好的格式
+2 把信息装到名字里
+选择专业的词
+避免泛泛的名字
+用具体的名字代替抽象的名字
+使用前缀或后缀来给名字附带更多信息
+决定名字的长度
+利用名字的格式来表达含义">
 
 
 
@@ -132,7 +159,7 @@
 
 
 
-  <title> 编写可读代码的艺术 | 月隐江楼的小楼 </title>
+  <title> 编写可读代码的艺术笔记 | 月隐江楼的小楼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -337,7 +364,7 @@
             
             
               
-                编写可读代码的艺术
+                编写可读代码的艺术笔记
               
             
           </h1>
@@ -398,7 +425,94 @@
       
 
       
-        
+        <h2 id="1-可读性基本定理"><a href="#1-可读性基本定理" class="headerlink" title="1 可读性基本定理"></a>1 可读性基本定理</h2><pre><code>代码的写法应当使别人**理解它所需的时间最小化**
+因此尽管减少代码行数是一个好目标，但把理解代码所需的时间最小 化是一个更好的目标
+“表面层次” 的改进开始： 选择好的名字、 写好的注释以及把代码整洁地写成更好的格式
+</code></pre><h2 id="2-把信息装到名字里"><a href="#2-把信息装到名字里" class="headerlink" title="2 把信息装到名字里"></a>2 把信息装到名字里</h2><ul>
+<li>选择专业的词</li>
+<li>避免泛泛的名字</li>
+<li>用具体的名字代替抽象的名字</li>
+<li>使用前缀或后缀来给名字附带更多信息</li>
+<li>决定名字的长度</li>
+<li>利用名字的格式来表达含义<a id="more"></a>
+</li>
+</ul>
+<h3 id="2-1-选择非常专业的词"><a href="#2-1-选择非常专业的词" class="headerlink" title="2.1 选择非常专业的词"></a>2.1 选择非常专业的词</h3><table>
+<thead>
+<tr>
+<th>单词</th>
+<th style="text-align:left">更多选择</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>send</td>
+<td style="text-align:left">deliver、 dispatch、 announce、 distribute、 route</td>
+</tr>
+<tr>
+<td>find</td>
+<td style="text-align:left">search、 extract、 locate、 recover</td>
+</tr>
+<tr>
+<td>start</td>
+<td style="text-align:left">launch、 create、 begin、 open</td>
+</tr>
+<tr>
+<td>start</td>
+<td style="text-align:left">create、 set up、 build、 generate、 compose、 add、 new</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-2-避免像tmp和retval这样泛泛的名字"><a href="#2-2-避免像tmp和retval这样泛泛的名字" class="headerlink" title="2.2 避免像tmp和retval这样泛泛的名字"></a>2.2 避免像tmp和retval这样泛泛的名字</h3><pre><code>挑一个能描述这个实体的值或者目的的名字
+</code></pre><h3 id="2-3-循环迭代器"><a href="#2-3-循环迭代器" class="headerlink" title="2.3 循环迭代器"></a>2.3 循环迭代器</h3><p>当有2层或3层循环的时候，一个有效精确的名字代替i，j会避免很多很难发现的缺陷<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if (clubs[i].members[k] == users[j])</div></pre></td></tr></table></figure></p>
+<p>使用更精确的名字可能会有帮助。 如果不把循环索引命名为（i、 j、k），另一个选择可以是（club_i、 members_i、 user_i）或者，更简化一点（ci、 mi、ui） 。 这种方式会帮助把代码中的缺陷变得更明显：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">if (clubs[ci].members[ui] == users[mi]) #缺陷！ 第一个字母不匹配</div><div class="line">if (clubs[ci].members[mi] == users[ui]) #OK。 首字母匹配</div></pre></td></tr></table></figure></p>
+<h3 id="2-4-用具体的名字代替抽象的名字"><a href="#2-4-用具体的名字代替抽象的名字" class="headerlink" title="2.4 用具体的名字代替抽象的名字"></a>2.4 用具体的名字代替抽象的名字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DISALLOW_EVIL_CONSTRUCTORS //没有实指</div><div class="line">DISALLOW_COPY_AND_ASSIGN</div></pre></td></tr></table></figure>
+<h3 id="2-5-为名字附带更多信息"><a href="#2-5-为名字附带更多信息" class="headerlink" title="2.5 为名字附带更多信息"></a>2.5 为名字附带更多信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">string id; // Example: &quot;af84ef845cd8&quot;</div></pre></td></tr></table></figure>
+<p>如果让读者记住这个ID的格式很重要的话， 你可以把它改名为hex_id。</p>
+<h3 id="2-6-带单位的值"><a href="#2-6-带单位的值" class="headerlink" title="2.6 带单位的值"></a>2.6 带单位的值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var start = (new Date()).getTime(); // top of the page</div></pre></td></tr></table></figure>
+<p>通过给变量结尾追加_ms， 我们可以让所有的地方更明确<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var start = (new Date()).getTime(); // top of the page</div></pre></td></tr></table></figure></p>
+<h3 id="2-7-附带其他重要属性"><a href="#2-7-附带其他重要属性" class="headerlink" title="2.7 附带其他重要属性"></a>2.7 附带其他重要属性</h3><table>
+<thead>
+<tr>
+<th>情形</th>
+<th style="text-align:left">变量名 更好的名字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一个“纯文本” 格式的密码， 需要加密后才能 进一步使用</td>
+<td style="text-align:left">password plaintext_password</td>
+</tr>
+<tr>
+<td>一条用户提供的注释，需要转义之后才能用于显示</td>
+<td style="text-align:left">comment unescaped_comment</td>
+</tr>
+<tr>
+<td>已转化为UTF-8格式的html字节</td>
+<td style="text-align:left">html html_utf8</td>
+</tr>
+<tr>
+<td>以“url方式编码” 的输入数据</td>
+<td style="text-align:left">data data_urlenc</td>
+</tr>
+</tbody>
+</table>
+<p>标识变量的任何关键属性，如果需要的话以易读的方式把它加到名字里。 你可以把这称为“英语表示法” 。</p>
+<h3 id="2-8-名字应该有多长"><a href="#2-8-名字应该有多长" class="headerlink" title="2.8 名字应该有多长"></a>2.8 名字应该有多长</h3><ul>
+<li>在小的作用域里可以使用短的名字</li>
+<li>使用通用的缩写</li>
+<li>丢掉没用的词</li>
+<li>利用名字的格式来传递含义</li>
+</ul>
+<p>Google开源项目格式规范的C++代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">static const int kMaxOpenFiles = 100;</div><div class="line">class LogReader &#123;</div><div class="line">    public:</div><div class="line">        void OpenFile(string local_file);</div><div class="line">    private:</div><div class="line">        int offset_; //用尾部‘_’区分是否为成员变量</div><div class="line">    DISALLOW_COPY_AND_ASSIGN(LogReader);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>变量名：类型，关键属性，单位</p>
+<h2 id="3-不会误解的名字"><a href="#3-不会误解的名字" class="headerlink" title="3 不会误解的名字"></a>3 不会误解的名字</h2><h3 id="3-1-推荐用min和max来表示（包含）极限"><a href="#3-1-推荐用min和max来表示（包含）极限" class="headerlink" title="3.1 推荐用min和max来表示（包含）极限"></a>3.1 推荐用min和max来表示（包含）极限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CART_TOO_BIG_LIMIT = 10</div><div class="line">if shopping_cart.num_items() &gt;= CART_TOO_BIG_LIMIT:</div><div class="line">	Error(&quot;Too many items in cart.&quot;)</div></pre></td></tr></table></figure>
+<p>这段代码有个经典的“大小差一” 缺陷。我们可以简单地通过把&gt;=变成&gt;来改正它<br>问题的根源在于 CART_TOO_BIG_LIMIT是个二义性名字， 它的含义到底是“少于” 还是“少于/且包括”</p>
+<h3 id="3-2-推荐用first和last来表示包含的范围"><a href="#3-2-推荐用first和last来表示包含的范围" class="headerlink" title="3.2 推荐用first和last来表示包含的范围"></a>3.2 推荐用first和last来表示包含的范围</h3><h3 id="3-3-推荐用begin和end来表示包含-排除范围"><a href="#3-3-推荐用begin和end来表示包含-排除范围" class="headerlink" title="3.3 推荐用begin和end来表示包含/排除范围"></a>3.3 推荐用begin和end来表示包含/排除范围</h3><h3 id="3-3-给布尔值命名"><a href="#3-3-给布尔值命名" class="headerlink" title="3.3 给布尔值命名"></a>3.3 给布尔值命名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bool read_password = true;</div></pre></td></tr></table></figure>
+<p>最好避免用“read” 这个词，用need_password或者user_is_authenticated这样的名字来代替<br>通常来讲， 加上像is、 has、can或should这样的词，可以把布尔值变得更明确。<br>最好避免使用反义名字</p>
+<h3 id="3-4-与使用者的期望相匹配"><a href="#3-4-与使用者的期望相匹配" class="headerlink" title="3.4 与使用者的期望相匹配"></a>3.4 与使用者的期望相匹配</h3><p>很多程序员都习惯了把以g e t开始的方法当做“轻量级访问器” 这样的用法， 它只是简单地返回一个内部成员变量。 如果违背这个习惯很可能会误导用户。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class StatisticsCollector &#123;</div><div class="line">    public void addSample(double x) &#123; ... &#125;</div><div class="line">    public double getMean() &#123;</div><div class="line">    //Iterate through all samples and return total / num_samples</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在这个例子中， getMean()的实现是要遍历所有经过的数据并同时计算中值。 如果有大量的数据的话， 这样的一步可能会有很大的代价！ 但一个容易轻信的程序员可能会随意地调用getMean()，还以为这是个没什么代价的调用。这个方法应当重命名为像 <strong>computeMean()</strong> 这样的名字， 后者听起来更像是有些代价的操作。</p>
+
       
     </div>
 
@@ -418,6 +532,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/编程之术，读书笔记/" rel="tag"># 编程之术，读书笔记</a>
+          
+        </div>
       
 
       
@@ -452,7 +572,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/02/25/编写可读代码的艺术/"
-     data-title="编写可读代码的艺术"
+     data-title="编写可读代码的艺术笔记"
      data-content=""
      data-url="http://glee0413.github.io/2017/02/25/编写可读代码的艺术/">
   <div class="ds-share-inline">
@@ -482,7 +602,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/25/编写可读代码的艺术/"
-           data-title="编写可读代码的艺术" data-url="http://glee0413.github.io/2017/02/25/编写可读代码的艺术/">
+           data-title="编写可读代码的艺术笔记" data-url="http://glee0413.github.io/2017/02/25/编写可读代码的艺术/">
       </div>
     
   </div>
@@ -506,8 +626,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -533,7 +662,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -594,6 +723,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-可读性基本定理"><span class="nav-number">1.</span> <span class="nav-text">1 可读性基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-把信息装到名字里"><span class="nav-number">2.</span> <span class="nav-text">2 把信息装到名字里</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-选择非常专业的词"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 选择非常专业的词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-避免像tmp和retval这样泛泛的名字"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 避免像tmp和retval这样泛泛的名字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-循环迭代器"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 循环迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-用具体的名字代替抽象的名字"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 用具体的名字代替抽象的名字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-为名字附带更多信息"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 为名字附带更多信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-带单位的值"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 带单位的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-附带其他重要属性"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 附带其他重要属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-名字应该有多长"><span class="nav-number">2.8.</span> <span class="nav-text">2.8 名字应该有多长</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-不会误解的名字"><span class="nav-number">3.</span> <span class="nav-text">3 不会误解的名字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-推荐用min和max来表示（包含）极限"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 推荐用min和max来表示（包含）极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-推荐用first和last来表示包含的范围"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 推荐用first和last来表示包含的范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-推荐用begin和end来表示包含-排除范围"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 推荐用begin和end来表示包含/排除范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-给布尔值命名"><span class="nav-number">3.4.</span> <span class="nav-text">3.3 给布尔值命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-与使用者的期望相匹配"><span class="nav-number">3.5.</span> <span class="nav-text">3.4 与使用者的期望相匹配</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
