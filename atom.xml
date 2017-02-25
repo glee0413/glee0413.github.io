@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://glee0413.github.io/"/>
-  <updated>2017-02-21T15:34:53.327Z</updated>
+  <updated>2017-02-25T14:14:18.156Z</updated>
   <id>http://glee0413.github.io/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编写可读代码的艺术</title>
+    <link href="http://glee0413.github.io/2017/02/25/%E7%BC%96%E5%86%99%E5%8F%AF%E8%AF%BB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF/"/>
+    <id>http://glee0413.github.io/2017/02/25/编写可读代码的艺术/</id>
+    <published>2017-02-25T14:14:18.000Z</published>
+    <updated>2017-02-25T14:14:18.156Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>spring boot 初体验1</title>
