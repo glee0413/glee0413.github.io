@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://glee0413.github.io/"/>
-  <updated>2017-02-25T14:33:00.658Z</updated>
+  <updated>2017-04-17T12:50:03.637Z</updated>
   <id>http://glee0413.github.io/</id>
   
   <author>
@@ -16,11 +16,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>qemu 虚拟机模拟raspberry</title>
+    <link href="http://glee0413.github.io/2017/04/17/qemu-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A8%A1%E6%8B%9Fraspberry/"/>
+    <id>http://glee0413.github.io/2017/04/17/qemu-虚拟机模拟raspberry/</id>
+    <published>2017-04-17T12:41:18.000Z</published>
+    <updated>2017-04-17T12:50:03.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1，下载树莓派&quot;&gt;&lt;a href=&quot;#1，下载树莓派&quot; class=&quot;headerlink&quot; title=&quot;1，下载树莓派&quot;&gt;&lt;/a&gt;1，下载树莓派&lt;/h2&gt;&lt;p&gt;到此目录下下载树莓派的镜像文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;https://downloads.raspberrypi.org/raspbian/&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2，安装qemu&quot;&gt;&lt;a href=&quot;#2，安装qemu&quot; class=&quot;headerlink&quot; title=&quot;2，安装qemu&quot;&gt;&lt;/a&gt;2，安装qemu&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;apt-get install qemu binfmt-support qemu-user-static&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;3，下载树莓派启动内核&quot;&gt;&lt;a href=&quot;#3，下载树莓派启动内核&quot; class=&quot;headerlink&quot; title=&quot;3，下载树莓派启动内核&quot;&gt;&lt;/a&gt;3，下载树莓派启动内核&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;https://github.com/dhruvvyas90/qemu-rpi-kernel&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;4，修改系统配置&quot;&gt;&lt;a href=&quot;#4，修改系统配置&quot; class=&quot;headerlink&quot; title=&quot;4，修改系统配置&quot;&gt;&lt;/a&gt;4，修改系统配置&lt;/h2&gt;&lt;h3 id=&quot;4-1-将镜像文件映射成loop设备文件&quot;&gt;&lt;a href=&quot;#4-1-将镜像文件映射成loop设备文件&quot; class=&quot;headerlink&quot; title=&quot;4.1 将镜像文件映射成loop设备文件&quot;&gt;&lt;/a&gt;4.1 将镜像文件映射成loop设备文件&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mkdir rootfs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo kpartx -av 2016-09-23-raspbian-jessie.img&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo mount /dev/mapper/loop0p2 rootfs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;cd rootfs&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="raspberry" scheme="http://glee0413.github.io/tags/raspberry/"/>
+    
+  </entry>
+  
+  <entry>
     <title>编写可读代码的艺术笔记</title>
     <link href="http://glee0413.github.io/2017/02/25/%E7%BC%96%E5%86%99%E5%8F%AF%E8%AF%BB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF/"/>
     <id>http://glee0413.github.io/2017/02/25/编写可读代码的艺术/</id>
     <published>2017-02-25T14:14:18.000Z</published>
-    <updated>2017-02-25T14:33:00.658Z</updated>
+    <updated>2017-02-25T14:35:55.799Z</updated>
     
     <summary type="html">
     
@@ -37,8 +58,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://glee0413.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="编程之术，读书笔记" scheme="http://glee0413.github.io/tags/%E7%BC%96%E7%A8%8B%E4%B9%8B%E6%9C%AF%EF%BC%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="编程之术" scheme="http://glee0413.github.io/tags/%E7%BC%96%E7%A8%8B%E4%B9%8B%E6%9C%AF/"/>
+    
+      <category term="读书笔记" scheme="http://glee0413.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
