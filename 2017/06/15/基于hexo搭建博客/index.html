@@ -99,7 +99,7 @@
 <meta property="og:description" content="安装hexo安装nodejs环境12sudo apt-get install -y nodejssudo apt install nodejs-legacy
 安装hexo1sudo npm install hexo-cli -g
 初始化blog目录1hexo init name.github.io/">
-<meta property="og:updated_time" content="2017-06-15T03:06:24.105Z">
+<meta property="og:updated_time" content="2017-06-15T03:15:05.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于hexo搭建博客">
 <meta name="twitter:description" content="安装hexo安装nodejs环境12sudo apt-get install -y nodejssudo apt install nodejs-legacy
@@ -405,7 +405,7 @@
 <h3 id="配置RSS"><a href="#配置RSS" class="headerlink" title="配置RSS"></a>配置RSS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install hexo-generator-feed --save</div></pre></td></tr></table></figure>
 <h3 id="添加文章的步骤"><a href="#添加文章的步骤" class="headerlink" title="添加文章的步骤"></a>添加文章的步骤</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;第一篇博客&quot;</div><div class="line">#edit source/_posts/第一篇博客.md</div><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <h3 id="管理hexo的生成文件的目录，注意在push之前需要把文件都提交"><a href="#管理hexo的生成文件的目录，注意在push之前需要把文件都提交" class="headerlink" title="管理hexo的生成文件的目录，注意在push之前需要把文件都提交"></a>管理hexo的生成文件的目录，注意在push之前需要把文件都提交</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git remote add origin https://github.com/name/blog.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
-<h3 id="修改-config-yml添加配置"><a href="#修改-config-yml添加配置" class="headerlink" title="修改_config.yml添加配置"></a>修改_config.yml添加配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># 添加发布的路径</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/name/name.github.io.git</div><div class="line">  branch: master</div><div class="line"># 添加多说和百度统计</div><div class="line">duoshuo_shortname: name</div><div class="line">duoshuo_share: true</div><div class="line">baidu_analytics: ec30a044f2f69aacc83c0b70ea53e01a</div><div class="line"></div><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
+<h3 id="修改-config-yml添加配置"><a href="#修改-config-yml添加配置" class="headerlink" title="修改_config.yml添加配置"></a>修改_config.yml添加配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"># 添加发布的路径</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/name/name.github.io.git</div><div class="line">  branch: master</div><div class="line"># 添加多说和百度统计</div><div class="line"># 多说停了。。</div><div class="line"># duoshuo_shortname: name</div><div class="line"># duoshuo_share: true</div><div class="line">baidu_analytics: ec30a044f2f69aacc83c0b70ea53e01a</div><div class="line"></div><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
 <h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><h3 id="安装nexT主题"><a href="#安装nexT主题" class="headerlink" title="安装nexT主题"></a>安装nexT主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd hexo_blog_dir</div><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
 <h3 id="添加tag"><a href="#添加tag" class="headerlink" title="添加tag"></a>添加tag</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page tags</div></pre></td></tr></table></figure>
 <h3 id="添加分类"><a href="#添加分类" class="headerlink" title="添加分类"></a>添加分类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page categories</div></pre></td></tr></table></figure>
@@ -456,6 +456,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/15/docker-远程桌面/" rel="prev" title="docker 远程桌面">
+                docker 远程桌面 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -527,7 +531,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

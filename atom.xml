@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://glee0413.github.io/"/>
-  <updated>2017-06-15T03:06:24.105Z</updated>
+  <updated>2017-06-15T04:17:45.575Z</updated>
   <id>http://glee0413.github.io/</id>
   
   <author>
@@ -16,11 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker 远程桌面</title>
+    <link href="http://glee0413.github.io/2017/06/15/docker-%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/"/>
+    <id>http://glee0413.github.io/2017/06/15/docker-远程桌面/</id>
+    <published>2017-06-15T04:06:07.000Z</published>
+    <updated>2017-06-15T04:17:45.575Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&quot;下载配置文件&quot;&gt;&lt;a href=&quot;#下载配置文件&quot; class=&quot;headerlink&quot; title=&quot;下载配置文件&quot;&gt;&lt;/a&gt;下载配置文件&lt;/h3&gt;&lt;p&gt;参考 &lt;a href=&quot;https://github.com/fcwu/docker-ubuntu-vnc-desktop&quot;&gt;github vnd desktop&lt;/a&gt;，将里面的image文件下载好，放到安装目录&lt;/p&gt;
+&lt;h3 id=&quot;需要提前下载tnit，此文件为针对docker使用的init文件&quot;&gt;&lt;a href=&quot;#需要提前下载tnit，此文件为针对docker使用的init文件&quot; class=&quot;headerlink&quot; title=&quot;需要提前下载tnit，此文件为针对docker使用的init文件&quot;&gt;&lt;/a&gt;需要提前下载tnit，此文件为针对docker使用的init文件&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;https://github.com/krallin/tini/releases/download/$&amp;#123;TINI_VERSION&amp;#125;/tini&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;编辑sources-list文件&quot;&gt;&lt;a href=&quot;#编辑sources-list文件&quot; class=&quot;headerlink&quot; title=&quot;编辑sources.list文件&quot;&gt;&lt;/a&gt;编辑sources.list文件&lt;/h3&gt;&lt;p&gt;在安装目录下建立sources.list文件，并加入&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main multiverse restricted universe&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main multiverse restricted universe&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://glee0413.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基于hexo搭建博客</title>
     <link href="http://glee0413.github.io/2017/06/15/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://glee0413.github.io/2017/06/15/基于hexo搭建博客/</id>
     <published>2017-06-15T02:42:18.000Z</published>
-    <updated>2017-06-15T03:06:24.105Z</updated>
+    <updated>2017-06-15T03:15:05.087Z</updated>
     
     <summary type="html">
     
