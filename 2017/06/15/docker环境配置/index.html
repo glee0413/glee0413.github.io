@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="spring," />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -89,16 +89,19 @@
 
 
 
-<meta name="description" content="spring boot web开发初体验1 spring boot安装开发环境：mint18 安装java，maven，gradle123456sudo apt-get install openjdk-8-jdksudo apt-get install mavencurl -s get.sdkman.io | bashsource &amp;quot;$HOME/.sdkman/bin/sdkman-in">
+<meta name="description" content="安装docker123sudo apt-get install docker docker.iosudo service docker startsudo docker info
+不使用sudo进行任务服务查看由于docker使用unix域套接字，除了docker和root，普通用户无法直接使用，用root又不太安全因此需要将当前用户加入到docker组中12sudo groupadd docke">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring boot 初体验1">
-<meta property="og:url" content="http://glee0413.github.io/2017/02/20/spring-boot-初体验1/index.html">
+<meta property="og:title" content="docker环境配置">
+<meta property="og:url" content="http://glee0413.github.io/2017/06/15/docker环境配置/index.html">
 <meta property="og:site_name" content="月隐江楼的小楼">
-<meta property="og:description" content="spring boot web开发初体验1 spring boot安装开发环境：mint18 安装java，maven，gradle123456sudo apt-get install openjdk-8-jdksudo apt-get install mavencurl -s get.sdkman.io | bashsource &amp;quot;$HOME/.sdkman/bin/sdkman-in">
-<meta property="og:updated_time" content="2017-02-21T15:34:53.327Z">
+<meta property="og:description" content="安装docker123sudo apt-get install docker docker.iosudo service docker startsudo docker info
+不使用sudo进行任务服务查看由于docker使用unix域套接字，除了docker和root，普通用户无法直接使用，用root又不太安全因此需要将当前用户加入到docker组中12sudo groupadd docke">
+<meta property="og:updated_time" content="2017-06-15T02:07:19.169Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring boot 初体验1">
-<meta name="twitter:description" content="spring boot web开发初体验1 spring boot安装开发环境：mint18 安装java，maven，gradle123456sudo apt-get install openjdk-8-jdksudo apt-get install mavencurl -s get.sdkman.io | bashsource &amp;quot;$HOME/.sdkman/bin/sdkman-in">
+<meta name="twitter:title" content="docker环境配置">
+<meta name="twitter:description" content="安装docker123sudo apt-get install docker docker.iosudo service docker startsudo docker info
+不使用sudo进行任务服务查看由于docker使用unix域套接字，除了docker和root，普通用户无法直接使用，用root又不太安全因此需要将当前用户加入到docker组中12sudo groupadd docke">
 
 
 
@@ -126,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://glee0413.github.io/2017/02/20/spring-boot-初体验1/"/>
+  <link rel="canonical" href="http://glee0413.github.io/2017/06/15/docker环境配置/"/>
 
 
 
 
 
-  <title> spring boot 初体验1 | 月隐江楼的小楼 </title>
+  <title> docker环境配置 | 月隐江楼的小楼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -313,7 +316,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://glee0413.github.io/2017/02/20/spring-boot-初体验1/">
+  <link itemprop="mainEntityOfPage" href="http://glee0413.github.io/2017/06/15/docker环境配置/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="月隐江楼">
@@ -337,7 +340,7 @@
             
             
               
-                spring boot 初体验1
+                docker环境配置
               
             
           </h1>
@@ -352,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-20T00:26:31+08:00">
-                2017-02-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T09:03:59+08:00">
+                2017-06-15
               </time>
             
 
@@ -371,8 +374,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/20/spring-boot-初体验1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/spring-boot-初体验1/" itemprop="commentCount"></span>
+                <a href="/2017/06/15/docker环境配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/15/docker环境配置/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -398,22 +401,32 @@
       
 
       
-        <h1 id="spring-boot-web开发初体验"><a href="#spring-boot-web开发初体验" class="headerlink" title="spring boot web开发初体验"></a>spring boot web开发初体验</h1><h2 id="1-spring-boot安装"><a href="#1-spring-boot安装" class="headerlink" title="1 spring boot安装"></a>1 spring boot安装</h2><p>开发环境：mint18 安装java，maven，gradle<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install openjdk-8-jdk</div><div class="line">sudo apt-get install maven</div><div class="line">curl -s get.sdkman.io | bash</div><div class="line">source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot; #初始化sdkman</div><div class="line">sdk install gradle #安装gradle</div><div class="line">sdk install springboot</div></pre></td></tr></table></figure></p>
+        <h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install docker docker.io</div><div class="line">sudo service docker start</div><div class="line">sudo docker info</div></pre></td></tr></table></figure>
+<h3 id="不使用sudo进行任务服务查看"><a href="#不使用sudo进行任务服务查看" class="headerlink" title="不使用sudo进行任务服务查看"></a>不使用sudo进行任务服务查看</h3><p>由于docker使用unix域套接字，除了docker和root，普通用户无法直接使用，用root又不太安全因此需要将当前用户加入到docker组中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo groupadd docker</div><div class="line">sudo usermod -aG docker cosmos</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<p>maven需要修改repo为阿里的repo，编辑/etc/maver/setting.xml，在mirrors中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;mirror&gt;</div><div class="line">    &lt;id&gt;alimaven&lt;/id&gt;</div><div class="line">    &lt;name&gt;aliyun maven&lt;/name&gt;</div><div class="line">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</div><div class="line">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;        </div><div class="line">&lt;/mirror&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="2-创建POM文件"><a href="#2-创建POM文件" class="headerlink" title="2 创建POM文件"></a>2 创建POM文件</h2><p>创建一个maven 的pom.xml文件，将下面的样例copy进去：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;com.example&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;myproject&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</div><div class="line"></div><div class="line">    &lt;parent&gt;</div><div class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</div><div class="line">        &lt;version&gt;2.0.0.BUILD-SNAPSHOT&lt;/version&gt;</div><div class="line">    &lt;/parent&gt;</div><div class="line"></div><div class="line">    &lt;!-- Additional lines to be added here... --&gt;</div><div class="line"></div><div class="line">    &lt;!-- (you don&apos;t need this if you are using a .RELEASE version) --&gt;</div><div class="line">    &lt;repositories&gt;</div><div class="line">        &lt;repository&gt;</div><div class="line">            &lt;id&gt;spring-snapshots&lt;/id&gt;</div><div class="line">            &lt;url&gt;http://repo.spring.io/snapshot&lt;/url&gt;</div><div class="line">            &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/snapshots&gt;</div><div class="line">        &lt;/repository&gt;</div><div class="line">        &lt;repository&gt;</div><div class="line">            &lt;id&gt;spring-milestones&lt;/id&gt;</div><div class="line">            &lt;url&gt;http://repo.spring.io/milestone&lt;/url&gt;</div><div class="line">        &lt;/repository&gt;</div><div class="line">    &lt;/repositories&gt;</div><div class="line">    &lt;pluginRepositories&gt;</div><div class="line">        &lt;pluginRepository&gt;</div><div class="line">            &lt;id&gt;spring-snapshots&lt;/id&gt;</div><div class="line">            &lt;url&gt;http://repo.spring.io/snapshot&lt;/url&gt;</div><div class="line">        &lt;/pluginRepository&gt;</div><div class="line">        &lt;pluginRepository&gt;</div><div class="line">            &lt;id&gt;spring-milestones&lt;/id&gt;</div><div class="line">            &lt;url&gt;http://repo.spring.io/milestone&lt;/url&gt;</div><div class="line">        &lt;/pluginRepository&gt;</div><div class="line">    &lt;/pluginRepositories&gt;</div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
-<p>执行 <strong>mvn package</strong> 下载测试pom文件</p>
-<h2 id="3-添加classpath依赖"><a href="#3-添加classpath依赖" class="headerlink" title="3 添加classpath依赖"></a>3 添加classpath依赖</h2><p>Spring Boot提供了许多“启动器”，使得容易将jar添加到类路径。 示例应用程序已经在POM的父部分中使用了spring-boot-starter-parent。 spring-boot-starter-parent是一个特殊的启动器，提供了有用的Maven默认值。 它还提供了一个依赖关系管理部分，以便您可以省略依赖关系的版本标签。</p>
-<p>其他“Starters”只是提供了开发特定类型应用程序时可能需要的依赖关系。 由于我们正在开发一个Web应用程序，我们将添加一个spring-boot-starter-web依赖关系<br><strong>mvn dependency：tree</strong>命令打印项目依赖关系的树表示。 您可以看到，spring-boot-starter-parent本身不提供依赖性。 让我们编辑我们的pom.xml，并在parent部分下面添加spring-boot-starter-web依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;dependencies&gt;</div><div class="line">    &lt;dependency&gt;</div><div class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</div><div class="line">    &lt;/dependency&gt;</div><div class="line">&lt;/dependencies&gt;</div></pre></td></tr></table></figure></p>
-<p>如果再次运行mvn dependency：tree，将看到现在还有许多其他依赖项，包括Tomcat Web服务器和Spring Boot本身。</p>
-<h2 id="4-测试代码"><a href="#4-测试代码" class="headerlink" title="4 测试代码"></a>4 测试代码</h2><p>添加<strong>src/main/java/Example.java</strong>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">import org.springframework.boot.*;</div><div class="line">import org.springframework.boot.autoconfigure.*;</div><div class="line">import org.springframework.stereotype.*;</div><div class="line">import org.springframework.web.bind.annotation.*;</div><div class="line"></div><div class="line">@RestController</div><div class="line">@EnableAutoConfiguration</div><div class="line">public class Example &#123;</div><div class="line"></div><div class="line">    @RequestMapping(&quot;/&quot;)</div><div class="line">    String home() &#123;</div><div class="line">        return &quot;Hello World!&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) throws Exception &#123;</div><div class="line">        SpringApplication.run(Example.class, args);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Example的<strong>@RestController</strong>注解，表示这个类是一个web控制器，来处理web请求<br><strong>@RequestMapping</strong> 表示一个路由请求</p>
-<p><strong>@EnableAutoConfiguration</strong> 告诉spring boot基于你添加的包的依赖如何配置spring boot，由于 <strong>spring-boot-starter-web</strong> 添加了tomcat及Spring MVC，自动配置假设你在开发一个web应用<br>main函数是一个遵照java约定标准方法，用于应用程序的启动入口。我们的main方法通过调用run来委托Spring Boot的SpringApplication类，SpringApplication将引导我们的应用程序，启动Spring，从而启动自动配置的Tomcat Web服务器。 我们需要传递Example.class作为run方法的参数来告诉SpringApplication这是主要的Spring组件。</p>
-<h2 id="5-运行应用程序"><a href="#5-运行应用程序" class="headerlink" title="5 运行应用程序"></a>5 运行应用程序</h2><p>运行<strong>mvn spring-boot:run</strong>,然后通过8080端口访问</p>
-<h2 id="6-创建一个可执行的jar文件"><a href="#6-创建一个可执行的jar文件" class="headerlink" title="6 创建一个可执行的jar文件"></a>6 创建一个可执行的jar文件</h2><p>要创建可执行的jar，我们需要将spring-boot-maven-plugin添加到我们的pom.xml中。 在dependencies部分下面插入以下行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;build&gt;</div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/build&gt;</div></pre></td></tr></table></figure></p>
-<p>运行 <strong>mvn package</strong> 打包，查看target目录生成myproject-0.0.1-SNAPSHOT.jar文件，myproject-0.0.1-SNAPSHOT.jar.original文件为打包为spring boot前的文件。<br>运行应用程序通过下面的命令<br><code>java -jar target/myproject-0.0.1-SNAPSHOT.jar</code></p>
-<p>参考：<a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application" target="_blank" rel="external">https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application</a></p>
+<h2 id="设置docker代理"><a href="#设置docker代理" class="headerlink" title="设置docker代理"></a>设置docker代理</h2><h3 id="docker代理需要独立设置"><a href="#docker代理需要独立设置" class="headerlink" title="docker代理需要独立设置"></a>docker代理需要独立设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir /etc/systemd/system/docker.service.d</div><div class="line">touch /etc/systemd/system/docker.service.d/http-proxy.conf</div></pre></td></tr></table></figure>
+<p>添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[Service]</div><div class="line">Environment=&quot;HTTP_PROXY=http://proxy.example.com:80/&quot;</div><div class="line">Environment=&quot;NO_PROXY=localhost,127.0.0.0/8,docker-registry.somecorporation.com&quot; //如果有本地registy的使用这个跳过代理</div></pre></td></tr></table></figure></p>
+<h3 id="查看环境变量"><a href="#查看环境变量" class="headerlink" title="查看环境变量"></a>查看环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo systemctl show docker --property Environment</div></pre></td></tr></table></figure>
+<h3 id="添加dns"><a href="#添加dns" class="headerlink" title="添加dns"></a>添加dns</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#添加新配置文件</div><div class="line">/etc/docker/daemon.json</div></pre></td></tr></table></figure>
+<p>填入一下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;dns&quot;: [&quot;domainIP&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="刷新环境变量"><a href="#刷新环境变量" class="headerlink" title="刷新环境变量"></a>刷新环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo systemctl daemon-reload</div><div class="line">sudo systemctl restart docker</div></pre></td></tr></table></figure>
+<h2 id="docker镜像保存路径"><a href="#docker镜像保存路径" class="headerlink" title="docker镜像保存路径"></a>docker镜像保存路径</h2><p>docker默认保存在<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## 安装运行镜像</div><div class="line">### 安装并运行</div></pre></td></tr></table></figure></p>
+<h2 id="以registry为例"><a href="#以registry为例" class="headerlink" title="以registry为例"></a>以registry为例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker pull registry</div><div class="line">docker run -d -p 5000:5000 --restart=always --name registry</div></pre></td></tr></table></figure>
+<h3 id="修改提交镜像"><a href="#修改提交镜像" class="headerlink" title="修改提交镜像"></a>修改提交镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker commit -m &quot;add vim and sudo command&quot; -a &quot;author&quot; $CONTAINER_ID author/domain:tag</div></pre></td></tr></table></figure>
+<h3 id="上传镜像"><a href="#上传镜像" class="headerlink" title="上传镜像"></a>上传镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 通过tag表示要上传的registy</div><div class="line">docker tag domain/image:tag ip:5000/domain/image:tag</div><div class="line"># 如果是dockerhub或阿里其他的非本地registry，需要登入</div><div class="line">docker login --username=username registry.cn-hangzhou.aliyuncs.com</div><div class="line">docker push 10.10.142.69:5000/domain/image:tag</div><div class="line"># 删除</div><div class="line">docker rmi 10.10.142.69:5000/domain/image:tag</div></pre></td></tr></table></figure>
+<p>本地registry配置时需要删除代理，并跳过证书</p>
+<h3 id="跳过证书配置"><a href="#跳过证书配置" class="headerlink" title="跳过证书配置"></a>跳过证书配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 再/etc/default/docker或/etc/sysconfig/docker中添加</div><div class="line">DOCKER_OPTS=&quot;--insecure-registry registryIP:5000&quot;</div></pre></td></tr></table></figure>
+<h2 id="进入docker"><a href="#进入docker" class="headerlink" title="进入docker"></a>进入docker</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">docker ps -a # 查看容器</div><div class="line">docker images # 查看镜像</div><div class="line">docker exec -it containerId /bin/bash</div><div class="line">docker attach --sig-proxy=false $CONTAINER_ID</div></pre></td></tr></table></figure>
+<h2 id="构建开发环境"><a href="#构建开发环境" class="headerlink" title="构建开发环境"></a>构建开发环境</h2><p>1，编写Dockerfile文件，用语构建环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">FROM ubuntu:16.04  </div><div class="line">MAINTAINER light &quot;light@light.com&quot; </div><div class="line">WORKDIR /</div><div class="line">CMD [&quot;/bin/bash&quot;]</div></pre></td></tr></table></figure></p>
+<p>2，执行构建<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker build -t light/lpr_build .</div></pre></td></tr></table></figure></p>
+<h2 id="查看docker镜像及容器的继承关系"><a href="#查看docker镜像及容器的继承关系" class="headerlink" title="查看docker镜像及容器的继承关系"></a>查看docker镜像及容器的继承关系</h2><p>使用<a href="https://github.com/justone/dockviz" target="_blank" rel="external">dockviz</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dockviz images -d -l | dot -Tpng -o images.png</div></pre></td></tr></table></figure></p>
+<h2 id="容器与宿主及文件交互"><a href="#容器与宿主及文件交互" class="headerlink" title="容器与宿主及文件交互"></a>容器与宿主及文件交互</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker cp opencv $CONTAINER_ID:/root</div></pre></td></tr></table></figure>
+<h2 id="docker-数据卷"><a href="#docker-数据卷" class="headerlink" title="docker 数据卷"></a>docker 数据卷</h2><p>可实现创造一个data volmumes，然后启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run -d --dns domainIP -v /root/anaconda3 --name anaconda3 domain/anaconda3 echo &quot;Anaconda3 data volmume&quot;</div></pre></td></tr></table></figure></p>
+<p>在需要使用数据卷的地方调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --device=/dev/nvidia1 --device=/dev/nvidia2 --device=/dev/nvidia3 -d -it --dns domainIP --volume-driver=nvidia-docker --volume=nvidia_driver_367.48:/usr/local/nvidia:ro --privileged=true --volumes-from anaconda3 -p 7080:80  --name develop cb5c90540bdb</div></pre></td></tr></table></figure></p>
+<p>注意数据卷不意为这保存数据，数据的保存还是要通过将宿主的目录挂载到docker中来实现，而数据卷可以用来保存一些公用的程序及配置</p>
+<h2 id="nvidia-docker配置"><a href="#nvidia-docker配置" class="headerlink" title="nvidia docker配置"></a>nvidia docker配置</h2><h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker-1.0.1-1.x86_64.rpm</div><div class="line">sudo rpm -ivh nvidia-docker-1.0.1-1.x86_64.rpm</div><div class="line">sudo systemctl start nvidia-docker</div></pre></td></tr></table></figure>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">docker run --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --device=/dev/nvidia1 --device=/dev/nvidia2 --device=/dev/nvidia3 -d -it --dns dnsip --volume=nvidia_driver_367.48:/usr/local/nvidia:ro --privileged=true domain/image:tag /bin/bash</div><div class="line"></div><div class="line">docker run --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --device=/dev/nvidia1 --device=/dev/nvidia2 --device=/dev/nvidia3 -d -it --dns dnsip --volume-driver=nvidia-docker</div><div class="line">--volume=nvidia_driver_367.48:/usr/local/nvidia:ro --privileged=true --name u16_cuda domain/image:tag /bin/bash</div><div class="line"># 如果不想每次都使用  --volume-driver=nvidia-docker 可以使用下面的命令，先将volume建出来</div><div class="line">docker volume create --name=nvidia_driver_367.48-d nvidia-docker</div></pre></td></tr></table></figure>
+<h3 id="更新ld-conf-d"><a href="#更新ld-conf-d" class="headerlink" title="更新ld.conf.d"></a>更新ld.conf.d</h3><p>添加/etc/ld.so.conf.d/cuda.conf文件，并加入 /usr/local/cuda/lib64<br>添加nvidia.conf文件，并加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/usr/local/nvidia/lib</div><div class="line">/usr/local/nvidia/lib64</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -437,7 +450,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/spring/" rel="tag"># spring</a>
+            <a href="/tags/docker/" rel="tag"># docker</a>
           
         </div>
       
@@ -450,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/19/第一篇博客/" rel="next" title="第一篇博客">
-                <i class="fa fa-chevron-left"></i> 第一篇博客
+              <a href="/2017/04/17/qemu-虚拟机模拟raspberry/" rel="next" title="qemu 虚拟机模拟raspberry">
+                <i class="fa fa-chevron-left"></i> qemu 虚拟机模拟raspberry
               </a>
             
           </div>
@@ -459,10 +472,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/25/编写可读代码的艺术/" rel="prev" title="编写可读代码的艺术笔记">
-                编写可读代码的艺术笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -477,10 +486,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/20/spring-boot-初体验1/"
-     data-title="spring boot 初体验1"
+        <div class="ds-share flat" data-thread-key="2017/06/15/docker环境配置/"
+     data-title="docker环境配置"
      data-content=""
-     data-url="http://glee0413.github.io/2017/02/20/spring-boot-初体验1/">
+     data-url="http://glee0413.github.io/2017/06/15/docker环境配置/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -507,8 +516,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/20/spring-boot-初体验1/"
-           data-title="spring boot 初体验1" data-url="http://glee0413.github.io/2017/02/20/spring-boot-初体验1/">
+      <div class="ds-thread" data-thread-key="2017/06/15/docker环境配置/"
+           data-title="docker环境配置" data-url="http://glee0413.github.io/2017/06/15/docker环境配置/">
       </div>
     
   </div>
@@ -646,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spring-boot-web开发初体验"><span class="nav-number">1.</span> <span class="nav-text">spring boot web开发初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-spring-boot安装"><span class="nav-number">1.1.</span> <span class="nav-text">1 spring boot安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建POM文件"><span class="nav-number">1.2.</span> <span class="nav-text">2 创建POM文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加classpath依赖"><span class="nav-number">1.3.</span> <span class="nav-text">3 添加classpath依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-测试代码"><span class="nav-number">1.4.</span> <span class="nav-text">4 测试代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-运行应用程序"><span class="nav-number">1.5.</span> <span class="nav-text">5 运行应用程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-创建一个可执行的jar文件"><span class="nav-number">1.6.</span> <span class="nav-text">6 创建一个可执行的jar文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装docker"><span class="nav-number">1.</span> <span class="nav-text">安装docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不使用sudo进行任务服务查看"><span class="nav-number">1.1.</span> <span class="nav-text">不使用sudo进行任务服务查看</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置docker代理"><span class="nav-number">2.</span> <span class="nav-text">设置docker代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker代理需要独立设置"><span class="nav-number">2.1.</span> <span class="nav-text">docker代理需要独立设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看环境变量"><span class="nav-number">2.2.</span> <span class="nav-text">查看环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加dns"><span class="nav-number">2.3.</span> <span class="nav-text">添加dns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刷新环境变量"><span class="nav-number">2.4.</span> <span class="nav-text">刷新环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker镜像保存路径"><span class="nav-number">3.</span> <span class="nav-text">docker镜像保存路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以registry为例"><span class="nav-number">4.</span> <span class="nav-text">以registry为例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改提交镜像"><span class="nav-number">4.1.</span> <span class="nav-text">修改提交镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传镜像"><span class="nav-number">4.2.</span> <span class="nav-text">上传镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跳过证书配置"><span class="nav-number">4.3.</span> <span class="nav-text">跳过证书配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入docker"><span class="nav-number">5.</span> <span class="nav-text">进入docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建开发环境"><span class="nav-number">6.</span> <span class="nav-text">构建开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看docker镜像及容器的继承关系"><span class="nav-number">7.</span> <span class="nav-text">查看docker镜像及容器的继承关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器与宿主及文件交互"><span class="nav-number">8.</span> <span class="nav-text">容器与宿主及文件交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker-数据卷"><span class="nav-number">9.</span> <span class="nav-text">docker 数据卷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nvidia-docker配置"><span class="nav-number">10.</span> <span class="nav-text">nvidia docker配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装"><span class="nav-number">10.1.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">10.2.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新ld-conf-d"><span class="nav-number">10.3.</span> <span class="nav-text">更新ld.conf.d</span></a></li></ol></li></ol></div>
             
 
           </div>

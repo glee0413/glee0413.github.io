@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://glee0413.github.io/"/>
-  <updated>2017-04-17T12:56:34.707Z</updated>
+  <updated>2017-06-15T02:07:19.169Z</updated>
   <id>http://glee0413.github.io/</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker环境配置</title>
+    <link href="http://glee0413.github.io/2017/06/15/docker%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://glee0413.github.io/2017/06/15/docker环境配置/</id>
+    <published>2017-06-15T01:03:59.000Z</published>
+    <updated>2017-06-15T02:07:19.169Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装docker&quot;&gt;&lt;a href=&quot;#安装docker&quot; class=&quot;headerlink&quot; title=&quot;安装docker&quot;&gt;&lt;/a&gt;安装docker&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install docker docker.io&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo service docker start&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo docker info&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;不使用sudo进行任务服务查看&quot;&gt;&lt;a href=&quot;#不使用sudo进行任务服务查看&quot; class=&quot;headerlink&quot; title=&quot;不使用sudo进行任务服务查看&quot;&gt;&lt;/a&gt;不使用sudo进行任务服务查看&lt;/h3&gt;&lt;p&gt;由于docker使用unix域套接字，除了docker和root，普通用户无法直接使用，用root又不太安全因此需要将当前用户加入到docker组中&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo groupadd docker&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo usermod -aG docker cosmos&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://glee0413.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>qemu 虚拟机模拟raspberry</title>
